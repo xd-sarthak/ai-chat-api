@@ -1,22 +1,27 @@
 {
   "compilerOptions": {
-    // Use ECMAScript Modules (ESM) with Node.js compatibility.
-    "module": "NodeNext",
-    // Controls how modules are resolved. "NodeNext" enables native ESM support.
-    "moduleResolution": "NodeNext",
-    // Target ECMAScript Next to enable the latest JavaScript features.
-    "target": "ESNext",
-    // Output directory for compiled JavaScript files (only used if "noEmit" is false).
+    // Output settings
     "outDir": "./dist",
-    // Root directory for TypeScript source files.
     "rootDir": "./src",
-    // Enable all strict type-checking options.
+
+    // Target and module system for Node.js with ES modules
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    // Type safety and compatibility
     "strict": true,
-    // Allow importing CommonJS modules in an ES module project.
     "esModuleInterop": true,
-    // Allow importing JSON files directly as modules.
     "resolveJsonModule": true,
-    // Skip checking declaration files in `node_modules` to speed up compilation.
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Allow imports with .ts/.tsx extensions if needed
+    "allowImportingTsExtensions": true,
+
+    // Optionally, include this if you want type checking but no output from `tsc`
+    "noEmit": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
